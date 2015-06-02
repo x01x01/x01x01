@@ -1,0 +1,29 @@
+/*Сделать стиль, показывает криво (внизу видно полосу)
+ сделать верстку под разные экраны и устройства.
+   Сделать список пользователей с апи вк
+*/
+.adress{
+
+    position:absolute;
+    height:11% ;
+   border: 6px solid gray;
+    border-style: solid;
+    padding: 5px;
+    width:98%;
+
+
+}
+.listing{
+
+    border: 6px solid gray;
+    position:absolute;
+    top:15%;
+    left:80%;
+    padding:9%;
+    width:18px;
+    height:46%;
+    text-align:left;
+
+
+}
+
