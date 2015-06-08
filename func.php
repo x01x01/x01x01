@@ -3,10 +3,11 @@
 и выводить в room.php
 Написать функцию listing которая будет определять количество посетителей в комнате
 */
-require_once ('bd.php');require_once ('map.php');
+require_once ('bd.php');
 
 //Функция которая определяет время и меняет картинку зависимо от время суток.
 //Подумать на счет картинки дня(как то не очень)
+
 function  back_size(){
 	  $date = date('H:i');
        if($date >'18:00' AND $date >'07:00'){
@@ -66,6 +67,7 @@ function listing(){
 }
 
 //Функция которая принимает параметры  и выводит определенный стиль в room.php
+
 if (isset($map)){ $map= $_POST['map'];}
 function map($map){
 
@@ -77,17 +79,16 @@ function map($map){
 
 }
 
-
 //Функция по выбору категорий и мест (клубы, рестораны)
 if (isset($map_list)){ $map_list= $_POST['map_list'];}
-var_dump($map_list);
+//var_dump($map_list);
 //map_list($map_list);
 function map_list($map_list){
 
-    $res = mysql_query("SELECT `list` FROM `list_list` WHERE rang='$map_list' ");
+    $res = mysql_query("SELECT `name` FROM `list_map` WHERE rang_category='$map_list' ");
 
     while($row = mysql_fetch_array($res)){
-       echo $row['list'];
+       echo $row['name'];
     }
 }
 

@@ -9,7 +9,6 @@
 флажок на карте по выбраному месту и возможность перейти по нему.
 */
 ?>
-<?require_once ('func.php');?>
 <html>
 <head>
     <title>Карта города</title>
@@ -18,12 +17,13 @@
     <script src="js/menu.js"></script>
 </head>
 <body>
+<?php require_once ('func.php');?>
 <form action="func.php" method="POST">
 <nav>
     <ul class="dropdown">
         <li class="drop"><a href="#">Выберите категорию заведений</a>
             <ul class="sub_menu">
-                <li><a href="<?php map_list(1)?>">Клубы</a></li>
+                <li><a href="<?php map_list(1)?>"><?php map_list(1); ?></a></li>
             </ul>
         </li>
 </nav>
